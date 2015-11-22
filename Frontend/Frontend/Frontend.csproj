@@ -66,6 +66,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="angular.min.js" />
+    <Content Include="Floors\Floor0.html" />
+    <Content Include="Floors\Floor1.html" />
+    <Content Include="Floors\Floor2.html" />
+    <Content Include="Floors\Floor3.html" />
+    <Content Include="Floors\Floor4.html" />
+    <Content Include="Images\derdeverdiep.PNG" />
+    <Content Include="Images\eersteverdiep.PNG" />
+    <Content Include="Images\Gelijkvloors.PNG" />
+    <Content Include="Images\tweedeverdiep.PNG" />
+    <Content Include="Images\vierdeverdiep.PNG" />
+    <Content Include="jquery-1.11.3.min.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -80,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bootstrap-3.3.5-dist\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
