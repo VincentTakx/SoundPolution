@@ -1,21 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    
     <title>Project: Sound polution: Home page </title>
 	<meta charset="utf-8" />
+    <script type="text/javascript" src="Angular.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
 </head>
-<body>
+<body ng-app="myapp">
+
     <h1>Project: sound polution</h1>
 
+    <div ng-controller="User" id="Floors">
 
-    <div id="Floors">
-
-        <button id="Floor0" type="button"><a href="Floors/Floor0.html">Gelijkvloors</a></button></br>
-        <button id="Floor1" type="button"><a href="Floors/Floor1.html">1st verdieping</a></button></br>
-        <button id="Floor2" type="button"><a href="Floors/Floor2.html">2de verdieping</a></button></br>
-        <button id="Floor3" type="button"><a href="Floors/Floor3.html">3de verdieping</a></button></br>
-        <button id="Floor4" type="button"><a href="Floors/Floor4.html">4de verdieping</a></button></br>
+        <button id="Floor0" type="button"><a href="Floor0.html" ng-click="getMeting(0)">Gelijkvloors</a></button></br>
+        <button id="Floor1" type="button"><a href="Floor1.html" ng-click="getMeting(1)">1st verdieping</a></button></br>
+        <button id="Floor2" type="button"><a href="Floor2.html" ng-click="getMeting(2)">2de verdieping</a></button></br>
+        <button id="Floor3" type="button"><a href="Floor3.html" ng-click="getMeting(3)">3de verdieping</a></button></br>
+        <button id="Floor4" type="button"><a href="Floor4.html" ng-click="getMeting(4)">4de verdieping</a></button></br>
 
     </div>
 

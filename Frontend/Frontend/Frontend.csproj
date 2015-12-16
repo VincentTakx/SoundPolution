@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular.js" />
     <Content Include="angular.min.js" />
     <Content Include="FirstFloor.js" />
     <Content Include="Floor0.html" />
