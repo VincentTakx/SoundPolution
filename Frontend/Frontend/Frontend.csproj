@@ -66,6 +66,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="angular.min.js" />
+    <Content Include="FirstFloor.js" />
+    <Content Include="Floor0.html" />
+    <Content Include="Floor1.html" />
+    <Content Include="Floor2.html" />
+    <Content Include="Functions.js" />
+    <Content Include="Images\derdeverdiep.jpg" />
+    <Content Include="Images\Eersteverdiep.jpg" />
+    <Content Include="Images\Gelijkvloors.jpg" />
+    <Content Include="Images\tweedeverdiep.jpg" />
+    <Content Include="Images\vierdeverdiep.jpg" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -75,12 +86,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SecondFloor.js" />
     <Content Include="SoundPolutionHome.html" />
+    <Content Include="TestPage.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
