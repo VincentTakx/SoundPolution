@@ -1,5 +1,7 @@
 <?php
 
+/*Format string: http://soundpolution-aphelloworld.rhcloud.com ++ "location=" + location + "&arduino_id=" + arduino_id + "&data=" + _data;*/
+
 $servername = getenv('OPENSHIFT_MYSQL_DB_HOST').":".getenv('OPENSHIFT_MYSQL_DB_PORT');
 $username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
 $password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
