@@ -82,7 +82,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SecondFloor.js" />
     <Content Include="SoundPolutionHome.html" />
     <Content Include="TestPage.html" />
     <Content Include="Web.config" />
