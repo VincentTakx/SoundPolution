@@ -67,10 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="angular.min.js" />
-    <Content Include="FirstFloor.js" />
-    <Content Include="Floor0.html" />
-    <Content Include="Floor1.html" />
-    <Content Include="Floor2.html" />
     <Content Include="Functions.js" />
     <Content Include="Images\derdeverdiep.jpg" />
     <Content Include="Images\Eersteverdiep.jpg" />

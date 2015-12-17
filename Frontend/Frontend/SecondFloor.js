@@ -22,15 +22,12 @@ function drawCircle(x, y, radius, decibels) {
     ctx.globalAlpha = 0.25;
     ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
     var col;
-    if (decibels >= 30 && decibels <= 60) {
+    if (decibels >= 30 && decibels <= 60)
         col = "green";
-    }
-    else if (decibels >= 60 && decibels <= 90) {
+    else if (decibels >= 60 && decibels <= 90)
         col = "orange";
-    }
-    else if (decibels >= 90 && decibels <= 120) {
+    else if (decibels >= 90 && decibels <= 120)
         col = "red";
-    }
 
     ctx.fillStyle = col;
     ctx.fill();

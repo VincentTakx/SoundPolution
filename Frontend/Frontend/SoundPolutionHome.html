@@ -4,6 +4,7 @@
     
     <title>Project: Sound polution: Home page </title>
 	<meta charset="utf-8" />
+    <script type="text/javascript" src="Functions.js"></script>
 </head>
 <body>
     <h1>Project: sound polution</h1>
@@ -11,13 +12,15 @@
 
     <div id="Floors">
 
-        <button id="Floor0" type="button"><a href="Floors/Floor0.html">Gelijkvloors</a></button></br>
-        <button id="Floor1" type="button"><a href="Floors/Floor1.html">1st verdieping</a></button></br>
-        <button id="Floor2" type="button"><a href="Floors/Floor2.html">2de verdieping</a></button></br>
-        <button id="Floor3" type="button"><a href="Floors/Floor3.html">3de verdieping</a></button></br>
-        <button id="Floor4" type="button"><a href="Floors/Floor4.html">4de verdieping</a></button></br>
+        <button id="Floor0" type="button" onclick="Draw('Images/Gelijkvloors.jpg',95)">Gelijkvloors</button></br>
+        <button id="Floor1" type="button" onclick="Draw('Images/Eersteverdiep.jpg', 83)">1st verdieping</button></br>
+        <button id="Floor2" type="button" onclick="Draw('Images/tweedeverdiep.jpg', 83)">2de verdieping</button></br>
+        <button id="Floor3" type="button" onclick="Draw('Images/derdeverdiep.jpg', 83)">3de verdieping</button></br>
+        <button id="Floor4" type="button"onclick="Draw('Images/vierdeverdiep.jpg', 83)">4de verdieping</button></br>
 
     </div>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;"></canvas>
 
+    <p>Eerste verdieping :</p>
 </body>
 </html>
