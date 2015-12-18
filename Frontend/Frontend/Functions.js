@@ -1,4 +1,23 @@
-﻿var ctx;
+﻿var app = angular.module("myapp", []);
+var url = "http://soundpolution-aphelloworld.rhcloud.com/index.php";
+
+app.config(function ($httpProvider) {
+    //Enable cross domain calls
+    $httpProvider.defaults.useXDomain = true;
+});
+
+app.controller("Circle", function ($scope, $http)
+{
+    $scope.Bijstand = function (Verdiep) {
+       $http.get(url + "?function=getMetingen&Verdieping="+Verdiep)
+        .success(function (Result) {
+            console.log(Result);
+        });
+    }
+});
+
+
+var ctx;
 var img;
 window.onload = function () {
     var c = document.getElementById("myCanvas");
