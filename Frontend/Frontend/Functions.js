@@ -12,55 +12,43 @@ function Draw(bck, decibels)
     clear();
     img.src = bck;
     ctx.drawImage(img, 10, 10);
-    var arr = [["Refter","green"], "Inkom", "Lounge"];
+    var arr = [["Refter",45], ["Inkom",83], ["Lounge",100]];
     arr.forEach(DrawCircle);
-
-    /*var col;
-
-    if (decibels >= 30 && decibels <= 60) {
-        col = "green";
-    }
-    else if (decibels >= 60 && decibels <= 90) {
-        col = "orange";
-    }
-    else if (decibels >= 90 && decibels <= 120) {
-        col = "red";
-    }
-
-    ctx.fillStyle = col;
-    ctx.fill();
-    ctx.globalAlpha = 1;*/
 }
 
 function DrawCircle(value, index, ar)
 {  
     ctx.globalAlpha = 0.25;
     ctx.beginPath();
-    if (value == "Refter")
-        {
+    if (value[0] == "Refter")
+    {
         p = new Point(775, 335);
-        ctx.arc((p.x/2), (p.y/2), 45, 0, 2 * Math.PI);
-        }
-    else if (value == "Lounge")
-        {
+        ctx.arc((p.x / 2), (p.y / 2), 45, 0, 2 * Math.PI);
+        defineColor(value[1]);
+    }
+    else if (value[0] == "Lounge")
+    {
         p = new Point(450, 400);
-        ctx.arc((p.x / 2),(p.y/2), 45, 0, 2 * Math.PI);
-        }
-   else if (value == "Inkom")
-        {
+        ctx.arc((p.x / 2), (p.y / 2), 45, 0, 2 * Math.PI);
+        defineColor(value[1]);
+    }
+    else if (value[0] == "Inkom") {
         p = new Point(650, 850);
-            ctx.arc((p.x / 2), (p.y / 2),45 , 0, 2 * Math.PI);
-        }
-    else if(value == "OLC")
+        ctx.arc((p.x / 2), (p.y / 2), 45, 0, 2 * Math.PI);
+        defineColor(value[1]);
+    }
+    else if (value[0] == "OLC") {
         p = new Point(175, 650);
-  else  if (value == "Gang")
+        ctx.arc((p.x / 2), (p.y / 2), 45, 0, 2 * Math.PI);
+        defineColor(value[1]);
+    }
+    else if (value[0] == "Gang") {
         p = new Point(650, 850);
-    else p = new Point(0, 0);
-
+        ctx.arc((p.x / 2), (p.y / 2), 45, 0, 2 * Math.PI);
+        defineColor(value[1]);
+    }
+    else alert("No valid measurements are known");
    
-    ctx.fillStyle = "green";
-    ctx.fill();
-    ctx.globalAlpha = 1;
     ctx.closePath();
 }
 
@@ -75,4 +63,20 @@ function clear()
     var c = document.getElementById("myCanvas");
     ctx = c.getContext("2d"); 
     ctx.clearRect(0, 0, c.width, c.height);
+}
+
+function defineColor(c)
+{
+    var col;
+
+    if (c <= 60)
+        col = "green";
+    else if (c >= 60 && c <= 90)
+        col = "orange";
+    else if (c >= 90)
+        col = "red";
+
+    ctx.fillStyle = col;
+    ctx.fill();
+    ctx.globalAlpha = 1;
 }
