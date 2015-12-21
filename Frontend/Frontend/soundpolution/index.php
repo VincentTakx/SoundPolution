@@ -1,5 +1,8 @@
 <?php
 
+header("Access-Control-Allow-Origin: 'http://localhost:54700'");
+header("Access-Control-Allow-Methods: GET, POST"); 
+header("Access-Control-Allow-Headers: X-Requested-With");
 /*Format string: http://soundpolution-aphelloworld.rhcloud.com ++ "location=" + location + "&arduino_id=" + arduino_id + "&data=" + _data;*/
 
 $servername = getenv('OPENSHIFT_MYSQL_DB_HOST').":".getenv('OPENSHIFT_MYSQL_DB_PORT');
@@ -15,12 +18,12 @@ if (!$con) {
 } 
 mysql_select_db($dbname,$con);
 
-if($_GET[]!=null)
+/*if($_GET[]!=null)
 {
 	$reg = mysql_query("INSERT INTO Metingen (meting,Locatie,device_id) VALUES ('".$_GET['data']."','".$_GET['location']."','".$_GET['arduino_id']."');");
-}
+}*/
 
-switch ($_POST['function']) {
+switch ($_GET['function']) {
 	case 'getMetingen':
 		getMetingen();
 		break;

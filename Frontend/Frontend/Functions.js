@@ -1,9 +1,8 @@
-﻿var app = angular.module("myapp", []);
-var url = "http://soundpolution-aphelloworld.rhcloud.com/index.php";
-
-app.config(function ($httpProvider) {
+﻿var url = "http://soundpolution-aphelloworld.rhcloud.com";
+var app = angular.module("myapp", []).config(function ($httpProvider) {
     //Enable cross domain calls
     $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 });
 
 app.controller("Circle", function ($scope, $http)
