@@ -48,6 +48,7 @@
         $met = $_GET['Meting'];
         $devid = $_GET['devid'];
 
+        $del = mysql_query("DELETE FROM Metingen WHERE Locatie = '$loc'");
         $reg = mysql_query("INSERT INTO Metingen(meting,Locatie,Verdieping,device_id) VALUES ('".$met."','".$loc."','".$ver."','".$devid."');");
 
         echo "success";
