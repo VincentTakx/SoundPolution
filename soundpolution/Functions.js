@@ -5,26 +5,30 @@ var app = angular.module("myapp", []).config(function ($httpProvider) {
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 });
 
+
 app.controller("Circle", function ($scope, $http)
 {
     $scope.Bijstand = function (Verdiep) {
        $http.get(url+"?function=getMetingen&Verdieping="+Verdiep+"")
         .success(function (Result) {
             var arr = new Array();
-            for (var i = 0; i < Result.length; i++)
-                arr[i] = [Result[i].Locatie, Result[i].meting];
-            Draw(Verdiep, arr);
-            console.log(Result);
+            if (Result != null) {
+                for (var i = 0; i < Result.length; i++)
+                    arr[i] = [Result[i].Locatie, Result[i].meting];
+                Draw(Verdiep, arr);
+            }
+            else Draw(Verdiep, null);
+
+            console.log(arr);
         });
     }
 });
 
 
 var ctx;
-var img;
+var img = new Image();;
 window.onload = function () {
     var c = document.getElementById("myCanvas");
-    img = new Image();
     img.src = "Images/Gelijkvloers.jpg";
     ctx = c.getContext("2d");
 }
@@ -34,7 +38,10 @@ function Draw(bck, arr)
     clear();
     img.src = Background(bck);
     ctx.drawImage(img, 10, 10);
-    arr.forEach(DrawCircle);
+    if (arr)
+        arr.forEach(DrawCircle);
+    else
+        alert("Nothing to see here!");
 }
 
 function Background(b)
@@ -96,7 +103,6 @@ function Point(x, y)
 function clear()
 {
     var c = document.getElementById("myCanvas");
-    ctx = c.getContext("2d"); 
     ctx.clearRect(0, 0, c.width, c.height);
 }
 
@@ -107,7 +113,7 @@ function defineColor(c)
     if (c <= 60)
         col = "green";
     else if (c >= 60 && c <= 90)
-        col = "orange";
+        col = "orange"
     else if (c >= 90)
         col = "red";
 
